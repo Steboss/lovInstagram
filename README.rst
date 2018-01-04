@@ -11,4 +11,4 @@ and important info from any photo.
 Usage
 -----
 
-```python lovInstagram -l  <username> <password> -u <user to scrape> -d <output directory>```
+``python main_scraper.py -l  <username> <password> -u <user to scrape> -d <output directory>``
