@@ -1,4 +1,4 @@
-lovInstagram |Starme|
+lovInstagram 
 =====================
 
 lovInstagram is a little easy Python script to download any pictures from
@@ -10,5 +10,6 @@ and important info from any photo.
 
 Usage
 -----
-
-$python lovInstagram -l  <username> <password> -u <user to scrape> -d <output directory>
+'''
+python lovInstagram -l  <username> <password> -u <user to scrape> -d <output directory>
+'''
