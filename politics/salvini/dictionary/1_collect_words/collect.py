@@ -37,6 +37,8 @@ with open(filename,"r") as reader:
             else:
                 tokens_list.append(token)
 
+print("Most recurring words...")
+#this is just to have fun
 max_val = 0
 values = []
 for keys in dict_words.keys():
@@ -44,8 +46,19 @@ for keys in dict_words.keys():
 
 
 values.sort()
-for i in range(len(values)-1,len(values)-50,-1):
+for i in range(len(values)-1,len(values)-20,-1):
     for keys in dict_words.keys():
         val = dict_words[keys]
         if val == values[i]:
             print(val, keys)
+
+#now save all the words in a filename
+#reduce the dictionary dimensions, the token
+#must have a value > 5
+
+print("Generation of a raw list of words...")
+ofile = open("raw_list_words.csv","w")
+for keys in dict_words.keys():
+    if dict_words[keys]>5:
+        ofile.write("%s\n" % keys)
+ofile.close()
