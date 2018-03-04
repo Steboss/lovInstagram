@@ -1,7 +1,7 @@
 from nltk.classify import NaiveBayesClassifier
 import sys
 import nltk
-
+import time
 def format_sentence(sent):
     return({word:True for word in  nltk.word_tokenize(sent)})
 
@@ -26,18 +26,28 @@ classifier = NaiveBayesClassifier.train(train_test)
 
 pos = 0
 neg = 0
-counter = 0 
+counter = 0
+count_line = 0
 with open("dataset.csv","r") as reader:
     for line in reader:
+        count_line+=1
+        #print(line)
         words = line.split()
         for word in words:
+            pospos=0
+            negneg=0
             classRes = classifier.classify(format_sentence(word))
             if classRes=="neg":
                 neg +=1
+                negneg+=1
             if classRes=="pos":
                 pos +=1
-
+                pospos+=1
             counter+=1
 
+        if count_line<50:
+            print(line)
+            print("neg:%d pos:%d" %(negneg,pospos))
+            time.sleep(1)
 print("Pos: %.4f" % (float(pos)/float(counter)))
-print("Neg: %.4f" % (float(neg)/float(counter)))       
+print("Neg: %.4f" % (float(neg)/float(counter)))
