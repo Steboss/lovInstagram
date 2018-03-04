@@ -47,10 +47,10 @@ with open("dataset.csv","r") as reader:
             wordswords.append([words,classRes])
             counter+=1
 
-        if count_line<50:
-            print(line)
-            print("neg:%d pos:%d" %(negneg,pospos))
-            print(wordswords)
-            time.sleep(1)
+#        if count_line<50:
+ #           print(line)
+ #           print("neg:%d pos:%d" %(negneg,pospos))
+ #           print(wordswords)
+ #           time.sleep(1)
 print("Pos: %.4f" % (float(pos)/float(counter)))
 print("Neg: %.4f" % (float(neg)/float(counter)))
