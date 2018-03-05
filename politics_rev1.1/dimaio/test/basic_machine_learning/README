@@ -1,0 +1,30 @@
+In this folder I am trying a more sophisticated approach with respect of
+using the dictionary. 
+Here I have manually selected 200 good comments and 120 bad comments to 
+DiMaio's feeds.
+Then, using the nltk module we are going to analyse how many bad and
+good comments are present
+
+
+IN this case 100 and 100 items gave very low accuracy
+
+The accuracy of the classifier is:
+Most Informative Features
+                      si = True              neg : pos    =      7.2 : 1.0
+                     voi = True              pos : neg    =      4.2 : 1.0
+                     sei = True              neg : pos    =      3.9 : 1.0
+                      me = True              neg : pos    =      3.9 : 1.0
+                     Per = True              neg : pos    =      3.9 : 1.0
+                      ai = True              neg : pos    =      3.9 : 1.0
+                    solo = True              neg : pos    =      3.6 : 1.0
+                   Forza = True              pos : neg    =      3.0 : 1.0
+                     dei = True              neg : pos    =      3.0 : 1.0
+                      ad = True              neg : pos    =      3.0 : 1.0
+None
+0.7080745341614907
+Total pos 25  and neg 25 out of 50
+
+Total pos 4862 and neg 2330 out of total comments 7192
+
+Percentage: pos 0.68  and neg 0.32 
+
