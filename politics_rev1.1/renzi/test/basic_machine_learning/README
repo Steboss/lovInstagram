@@ -1,0 +1,13 @@
+In this folder I am trying a more sophisticated approach with respect of
+using the dictionary. 
+Here I have manually selected 100 good comments and 100 bad comments to 
+Renzi's feeds.
+Then, using the nltk module we are going to analyse how many bad and
+good comments are present
+
+The accuracy of the classifier is:
+0.8536585365853658
+Results:
+
+Total pos 252 and neg 1494 out of total comments 1746
+

@@ -40,25 +40,11 @@ with open("dataset.csv","r") as reader:
     for line in reader:
         count_line+=1 #this is the single comment
         #print(line)
-        words = line.split()
-        for word in words:
-            pospos=0
-            negneg=0
-            #wordswords = []
-            classRes = classifier.classify(format_sentence(word))
-            if classRes=="neg":
-                neg +=1
-                negneg+=1
-            if classRes=="pos":
-                pos +=1
-                pospos+=1
-        #check which are the positive comments
-        if pospos> negneg:
-            pos_line+=1
-            pos_file.write(line)
-        else:
-            neg_line+=1
-            neg_file.write( line)
+        classRes = classifier.classify(format_sentence(line))
+        if classRes=="neg":
+            neg +=1
+        if classRes=="pos":
+            pos +=1
 
         #if count_line<50:
         #    print(line)
@@ -66,10 +52,8 @@ with open("dataset.csv","r") as reader:
             #print(wordswords)
         #    time.sleep(1)
 
-pos_file.close()
-neg_file.close()
-print("Pos raw %d out of %d" % (pos_line,count_line))
-print("Neg raw %d out of %d" % (neg_line,count_line))
+print("Pos raw %d out of %d" % (pos,count_line))
+print("Neg raw %d out of %d" % (neg,count_line))
 
 #print("Pos: %.4f" % (float(pos)/float(counter)))
 #print("Neg: %.4f" % (float(neg)/float(counter)))
