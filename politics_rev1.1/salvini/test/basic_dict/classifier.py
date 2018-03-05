@@ -55,10 +55,10 @@ with open("dataset.csv","r") as reader:
         #check which are the positive comments
         if pospos> negneg:
             pos_line+=1
-            pos_file.write("%s\n" % line)
+            pos_file.write(line)
         else:
             neg_line+=1
-            neg_file.write("%s\n" % line)
+            neg_file.write( line)
 
         #if count_line<50:
         #    print(line)
