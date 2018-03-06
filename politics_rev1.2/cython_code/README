@@ -1,0 +1,13 @@
+Here I am creating a c code for computing the trnasition matrix 
+of each comment words
+Later, I'll apply this code on the comments and figures captions
+
+
+- In cython take the input file name and open it
+- go through each line, creating a list, count how many words we have
+- take into account also stopwords for the moment
+- once we have the total counter we can ask C to create a counter*counter matrix
+- in C compute the transition probability, so pass an array with all the
+lines of the comment_text
+- Starting from the first line, split the words at each space, go through 
+each word  and count the trnaasition probability
