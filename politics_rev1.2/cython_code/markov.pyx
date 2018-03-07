@@ -10,8 +10,7 @@ from libc.stdlib cimport malloc, free
 from cpython.string cimport PyString_AsString
 
 cdef extern from "c_code/markov.c":
-    double probability_matrix(char **sentence, char **words, int lines_dim ,int words_dim)
-
+  double probability_matrix(char **sentences,char **words, int lines_dim ,int words_dim)
 
 cdef char ** to_cstring_array(list_str):
     cdef char **ret = <char **>malloc(len(list_str) * sizeof(char *))
@@ -45,23 +44,9 @@ cpdef double transition_matrix(filename) :
                     continue
                 else:
                     words.append(word)
-    #sanity check, do we have all the words in lines?
-    #print(words)
-    #print(lines)
-    #print("Length of words %d\n" %len(words))
-    #counter = 0
-    #wordswords = []
-    #for line in lines:
-  #      splitter= line.split()
-#        for split in splitter:#
-#            if split in words:
-#                if split in wordswords:
-#                    continue
-#                else :
-#                    wordswords.append(split)
-#                    counter+=1
-#    print("Splitter in words %d\n"% counter)
-#    sys.exit(-1)
+
+    #TODO ADD ASANITY CHECK between words andlines
+    #TODO ELIMINATE ALL THE BLANKLINES
     #now pass the list to the C code
     c_arr_dim = len(words)
     c_lines_dim = len(lines) #how many lines do we have?

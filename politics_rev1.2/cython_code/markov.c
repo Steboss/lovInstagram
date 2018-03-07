@@ -1284,8 +1284,8 @@ static PyObject *__pyx_tuple__6;
 static PyObject *__pyx_tuple__7;
 static PyObject *__pyx_tuple__8;
 
-/* "markov.pyx":16
- * 
+/* "markov.pyx":15
+ *   double probability_matrix(char **sentences,char **words, int lines_dim ,int words_dim)
  * 
  * cdef char ** to_cstring_array(list_str):             # <<<<<<<<<<<<<<
  *     cdef char **ret = <char **>malloc(len(list_str) * sizeof(char *))
@@ -1303,42 +1303,42 @@ static char **__pyx_f_6markov_to_cstring_array(PyObject *__pyx_v_list_str) {
   char *__pyx_t_4;
   __Pyx_RefNannySetupContext("to_cstring_array", 0);
 
-  /* "markov.pyx":17
+  /* "markov.pyx":16
  * 
  * cdef char ** to_cstring_array(list_str):
  *     cdef char **ret = <char **>malloc(len(list_str) * sizeof(char *))             # <<<<<<<<<<<<<<
  *     for i in xrange(len(list_str)):
  *         ret[i] = PyString_AsString(list_str[i])
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_list_str); if (unlikely(__pyx_t_1 == -1)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_list_str); if (unlikely(__pyx_t_1 == -1)) __PYX_ERR(0, 16, __pyx_L1_error)
   __pyx_v_ret = ((char **)malloc((__pyx_t_1 * (sizeof(char *)))));
 
-  /* "markov.pyx":18
+  /* "markov.pyx":17
  * cdef char ** to_cstring_array(list_str):
  *     cdef char **ret = <char **>malloc(len(list_str) * sizeof(char *))
  *     for i in xrange(len(list_str)):             # <<<<<<<<<<<<<<
  *         ret[i] = PyString_AsString(list_str[i])
  *     return ret
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_list_str); if (unlikely(__pyx_t_1 == -1)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_list_str); if (unlikely(__pyx_t_1 == -1)) __PYX_ERR(0, 17, __pyx_L1_error)
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
     __pyx_v_i = __pyx_t_2;
 
-    /* "markov.pyx":19
+    /* "markov.pyx":18
  *     cdef char **ret = <char **>malloc(len(list_str) * sizeof(char *))
  *     for i in xrange(len(list_str)):
  *         ret[i] = PyString_AsString(list_str[i])             # <<<<<<<<<<<<<<
  *     return ret
  * 
  */
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_list_str, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 19, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_list_str, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 18, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PyString_AsString(__pyx_t_3); if (unlikely(__pyx_t_4 == NULL)) __PYX_ERR(0, 19, __pyx_L1_error)
+    __pyx_t_4 = PyString_AsString(__pyx_t_3); if (unlikely(__pyx_t_4 == NULL)) __PYX_ERR(0, 18, __pyx_L1_error)
     (__pyx_v_ret[__pyx_v_i]) = __pyx_t_4;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
 
-  /* "markov.pyx":20
+  /* "markov.pyx":19
  *     for i in xrange(len(list_str)):
  *         ret[i] = PyString_AsString(list_str[i])
  *     return ret             # <<<<<<<<<<<<<<
@@ -1348,8 +1348,8 @@ static char **__pyx_f_6markov_to_cstring_array(PyObject *__pyx_v_list_str) {
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "markov.pyx":16
- * 
+  /* "markov.pyx":15
+ *   double probability_matrix(char **sentences,char **words, int lines_dim ,int words_dim)
  * 
  * cdef char ** to_cstring_array(list_str):             # <<<<<<<<<<<<<<
  *     cdef char **ret = <char **>malloc(len(list_str) * sizeof(char *))
@@ -1366,7 +1366,7 @@ static char **__pyx_f_6markov_to_cstring_array(PyObject *__pyx_v_list_str) {
   return __pyx_r;
 }
 
-/* "markov.pyx":27
+/* "markov.pyx":26
  * #we need cpdef to expose the function to python
  * 
  * cpdef double transition_matrix(filename) :             # <<<<<<<<<<<<<<
@@ -1409,14 +1409,14 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
   PyObject *__pyx_t_17 = NULL;
   __Pyx_RefNannySetupContext("transition_matrix", 0);
 
-  /* "markov.pyx":29
+  /* "markov.pyx":28
  * cpdef double transition_matrix(filename) :
  *     #here we read the inputfile
  *     ifile = open(filename,"r")             # <<<<<<<<<<<<<<
  *     #create a list to store words
  *     words = []
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_filename);
   __Pyx_GIVEREF(__pyx_v_filename);
@@ -1424,37 +1424,37 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
   __Pyx_INCREF(__pyx_n_s_r);
   __Pyx_GIVEREF(__pyx_n_s_r);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_s_r);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ifile = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "markov.pyx":31
+  /* "markov.pyx":30
  *     ifile = open(filename,"r")
  *     #create a list to store words
  *     words = []             # <<<<<<<<<<<<<<
  *     lines = []
  * 
  */
-  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_words = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "markov.pyx":32
+  /* "markov.pyx":31
  *     #create a list to store words
  *     words = []
  *     lines = []             # <<<<<<<<<<<<<<
  * 
  *     #here do in this way:
  */
-  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 32, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_lines = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "markov.pyx":37
+  /* "markov.pyx":36
  *     #clean the sentence from all the punctuations
  *     #
  *     with ifile as reader:             # <<<<<<<<<<<<<<
@@ -1462,9 +1462,9 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
  *             new_line = re.sub('[^A-Za-z0-9]+'," ", line)
  */
   /*with:*/ {
-    __pyx_t_3 = __Pyx_PyObject_LookupSpecial(__pyx_v_ifile, __pyx_n_s_exit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 37, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_LookupSpecial(__pyx_v_ifile, __pyx_n_s_exit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = __Pyx_PyObject_LookupSpecial(__pyx_v_ifile, __pyx_n_s_enter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L3_error)
+    __pyx_t_1 = __Pyx_PyObject_LookupSpecial(__pyx_v_ifile, __pyx_n_s_enter); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 36, __pyx_L3_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_4 = NULL;
     if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_1))) {
@@ -1477,10 +1477,10 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
       }
     }
     if (__pyx_t_4) {
-      __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L3_error)
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L3_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else {
-      __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L3_error)
+      __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L3_error)
     }
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -1498,7 +1498,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
           __pyx_v_reader = __pyx_t_1;
           __pyx_t_1 = 0;
 
-          /* "markov.pyx":38
+          /* "markov.pyx":37
  *     #
  *     with ifile as reader:
  *         for line in reader:             # <<<<<<<<<<<<<<
@@ -1509,26 +1509,26 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
             __pyx_t_1 = __pyx_v_reader; __Pyx_INCREF(__pyx_t_1); __pyx_t_8 = 0;
             __pyx_t_9 = NULL;
           } else {
-            __pyx_t_8 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_reader); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L7_error)
+            __pyx_t_8 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_reader); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_1);
-            __pyx_t_9 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 38, __pyx_L7_error)
+            __pyx_t_9 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 37, __pyx_L7_error)
           }
           for (;;) {
             if (likely(!__pyx_t_9)) {
               if (likely(PyList_CheckExact(__pyx_t_1))) {
                 if (__pyx_t_8 >= PyList_GET_SIZE(__pyx_t_1)) break;
                 #if CYTHON_COMPILING_IN_CPYTHON
-                __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 38, __pyx_L7_error)
+                __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 37, __pyx_L7_error)
                 #else
-                __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L7_error)
+                __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L7_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 #endif
               } else {
                 if (__pyx_t_8 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
                 #if CYTHON_COMPILING_IN_CPYTHON
-                __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 38, __pyx_L7_error)
+                __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_8); __Pyx_INCREF(__pyx_t_2); __pyx_t_8++; if (unlikely(0 < 0)) __PYX_ERR(0, 37, __pyx_L7_error)
                 #else
-                __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L7_error)
+                __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_8); __pyx_t_8++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L7_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 #endif
               }
@@ -1538,7 +1538,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
                 PyObject* exc_type = PyErr_Occurred();
                 if (exc_type) {
                   if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                  else __PYX_ERR(0, 38, __pyx_L7_error)
+                  else __PYX_ERR(0, 37, __pyx_L7_error)
                 }
                 break;
               }
@@ -1547,16 +1547,16 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
             __Pyx_XDECREF_SET(__pyx_v_line, __pyx_t_2);
             __pyx_t_2 = 0;
 
-            /* "markov.pyx":39
+            /* "markov.pyx":38
  *     with ifile as reader:
  *         for line in reader:
  *             new_line = re.sub('[^A-Za-z0-9]+'," ", line)             # <<<<<<<<<<<<<<
  *             lines.append(new_line)
  *             #split
  */
-            __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_re); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 39, __pyx_L7_error)
+            __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_re); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 38, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_4);
-            __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_sub); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 39, __pyx_L7_error)
+            __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_sub); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 38, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_10);
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             __pyx_t_4 = NULL;
@@ -1571,7 +1571,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
                 __pyx_t_11 = 1;
               }
             }
-            __pyx_t_12 = PyTuple_New(3+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 39, __pyx_L7_error)
+            __pyx_t_12 = PyTuple_New(3+__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 38, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_12);
             if (__pyx_t_4) {
               __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -1585,30 +1585,30 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
             __Pyx_INCREF(__pyx_v_line);
             __Pyx_GIVEREF(__pyx_v_line);
             PyTuple_SET_ITEM(__pyx_t_12, 2+__pyx_t_11, __pyx_v_line);
-            __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_t_12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L7_error)
+            __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_t_12, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_2);
             __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
             __Pyx_XDECREF_SET(__pyx_v_new_line, __pyx_t_2);
             __pyx_t_2 = 0;
 
-            /* "markov.pyx":40
+            /* "markov.pyx":39
  *         for line in reader:
  *             new_line = re.sub('[^A-Za-z0-9]+'," ", line)
  *             lines.append(new_line)             # <<<<<<<<<<<<<<
  *             #split
  *             splitter = new_line.split()
  */
-            __pyx_t_13 = __Pyx_PyList_Append(__pyx_v_lines, __pyx_v_new_line); if (unlikely(__pyx_t_13 == -1)) __PYX_ERR(0, 40, __pyx_L7_error)
+            __pyx_t_13 = __Pyx_PyList_Append(__pyx_v_lines, __pyx_v_new_line); if (unlikely(__pyx_t_13 == -1)) __PYX_ERR(0, 39, __pyx_L7_error)
 
-            /* "markov.pyx":42
+            /* "markov.pyx":41
  *             lines.append(new_line)
  *             #split
  *             splitter = new_line.split()             # <<<<<<<<<<<<<<
  *             for word in splitter:
  *                 if word in words:
  */
-            __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_new_line, __pyx_n_s_split); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 42, __pyx_L7_error)
+            __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_new_line, __pyx_n_s_split); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 41, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_10);
             __pyx_t_12 = NULL;
             if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_10))) {
@@ -1621,17 +1621,17 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
               }
             }
             if (__pyx_t_12) {
-              __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_12); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L7_error)
+              __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_12); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L7_error)
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
             } else {
-              __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L7_error)
+              __pyx_t_2 = __Pyx_PyObject_CallNoArg(__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L7_error)
             }
             __Pyx_GOTREF(__pyx_t_2);
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
             __Pyx_XDECREF_SET(__pyx_v_splitter, __pyx_t_2);
             __pyx_t_2 = 0;
 
-            /* "markov.pyx":43
+            /* "markov.pyx":42
  *             #split
  *             splitter = new_line.split()
  *             for word in splitter:             # <<<<<<<<<<<<<<
@@ -1642,26 +1642,26 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
               __pyx_t_2 = __pyx_v_splitter; __Pyx_INCREF(__pyx_t_2); __pyx_t_11 = 0;
               __pyx_t_14 = NULL;
             } else {
-              __pyx_t_11 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_v_splitter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L7_error)
+              __pyx_t_11 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_v_splitter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 42, __pyx_L7_error)
               __Pyx_GOTREF(__pyx_t_2);
-              __pyx_t_14 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 43, __pyx_L7_error)
+              __pyx_t_14 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 42, __pyx_L7_error)
             }
             for (;;) {
               if (likely(!__pyx_t_14)) {
                 if (likely(PyList_CheckExact(__pyx_t_2))) {
                   if (__pyx_t_11 >= PyList_GET_SIZE(__pyx_t_2)) break;
                   #if CYTHON_COMPILING_IN_CPYTHON
-                  __pyx_t_10 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_11); __Pyx_INCREF(__pyx_t_10); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 43, __pyx_L7_error)
+                  __pyx_t_10 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_11); __Pyx_INCREF(__pyx_t_10); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 42, __pyx_L7_error)
                   #else
-                  __pyx_t_10 = PySequence_ITEM(__pyx_t_2, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 43, __pyx_L7_error)
+                  __pyx_t_10 = PySequence_ITEM(__pyx_t_2, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 42, __pyx_L7_error)
                   __Pyx_GOTREF(__pyx_t_10);
                   #endif
                 } else {
                   if (__pyx_t_11 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
                   #if CYTHON_COMPILING_IN_CPYTHON
-                  __pyx_t_10 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_11); __Pyx_INCREF(__pyx_t_10); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 43, __pyx_L7_error)
+                  __pyx_t_10 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_11); __Pyx_INCREF(__pyx_t_10); __pyx_t_11++; if (unlikely(0 < 0)) __PYX_ERR(0, 42, __pyx_L7_error)
                   #else
-                  __pyx_t_10 = PySequence_ITEM(__pyx_t_2, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 43, __pyx_L7_error)
+                  __pyx_t_10 = PySequence_ITEM(__pyx_t_2, __pyx_t_11); __pyx_t_11++; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 42, __pyx_L7_error)
                   __Pyx_GOTREF(__pyx_t_10);
                   #endif
                 }
@@ -1671,7 +1671,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
                   PyObject* exc_type = PyErr_Occurred();
                   if (exc_type) {
                     if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                    else __PYX_ERR(0, 43, __pyx_L7_error)
+                    else __PYX_ERR(0, 42, __pyx_L7_error)
                   }
                   break;
                 }
@@ -1680,18 +1680,18 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
               __Pyx_XDECREF_SET(__pyx_v_word, __pyx_t_10);
               __pyx_t_10 = 0;
 
-              /* "markov.pyx":44
+              /* "markov.pyx":43
  *             splitter = new_line.split()
  *             for word in splitter:
  *                 if word in words:             # <<<<<<<<<<<<<<
  *                     continue
  *                 else:
  */
-              __pyx_t_15 = (__Pyx_PySequence_ContainsTF(__pyx_v_word, __pyx_v_words, Py_EQ)); if (unlikely(__pyx_t_15 < 0)) __PYX_ERR(0, 44, __pyx_L7_error)
+              __pyx_t_15 = (__Pyx_PySequence_ContainsTF(__pyx_v_word, __pyx_v_words, Py_EQ)); if (unlikely(__pyx_t_15 < 0)) __PYX_ERR(0, 43, __pyx_L7_error)
               __pyx_t_16 = (__pyx_t_15 != 0);
               if (__pyx_t_16) {
 
-                /* "markov.pyx":45
+                /* "markov.pyx":44
  *             for word in splitter:
  *                 if word in words:
  *                     continue             # <<<<<<<<<<<<<<
@@ -1700,7 +1700,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
  */
                 goto __pyx_L17_continue;
 
-                /* "markov.pyx":44
+                /* "markov.pyx":43
  *             splitter = new_line.split()
  *             for word in splitter:
  *                 if word in words:             # <<<<<<<<<<<<<<
@@ -1709,18 +1709,18 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
  */
               }
 
-              /* "markov.pyx":47
+              /* "markov.pyx":46
  *                     continue
  *                 else:
  *                     words.append(word)             # <<<<<<<<<<<<<<
- *     #sanity check, do we have all the words in lines?
- *     #print(words)
+ * 
+ *     #TODO ADD ASANITY CHECK between words andlines
  */
               /*else*/ {
-                __pyx_t_13 = __Pyx_PyList_Append(__pyx_v_words, __pyx_v_word); if (unlikely(__pyx_t_13 == -1)) __PYX_ERR(0, 47, __pyx_L7_error)
+                __pyx_t_13 = __Pyx_PyList_Append(__pyx_v_words, __pyx_v_word); if (unlikely(__pyx_t_13 == -1)) __PYX_ERR(0, 46, __pyx_L7_error)
               }
 
-              /* "markov.pyx":43
+              /* "markov.pyx":42
  *             #split
  *             splitter = new_line.split()
  *             for word in splitter:             # <<<<<<<<<<<<<<
@@ -1731,7 +1731,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
             }
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-            /* "markov.pyx":38
+            /* "markov.pyx":37
  *     #
  *     with ifile as reader:
  *         for line in reader:             # <<<<<<<<<<<<<<
@@ -1741,7 +1741,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "markov.pyx":37
+          /* "markov.pyx":36
  *     #clean the sentence from all the punctuations
  *     #
  *     with ifile as reader:             # <<<<<<<<<<<<<<
@@ -1762,20 +1762,20 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         /*except:*/ {
           __Pyx_AddTraceback("markov.transition_matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_2, &__pyx_t_10) < 0) __PYX_ERR(0, 37, __pyx_L9_except_error)
+          if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_2, &__pyx_t_10) < 0) __PYX_ERR(0, 36, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_GOTREF(__pyx_t_10);
-          __pyx_t_12 = PyTuple_Pack(3, __pyx_t_1, __pyx_t_2, __pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 37, __pyx_L9_except_error)
+          __pyx_t_12 = PyTuple_Pack(3, __pyx_t_1, __pyx_t_2, __pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 36, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_12);
           __pyx_t_17 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_12, NULL);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-          if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 37, __pyx_L9_except_error)
+          if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 36, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_17);
           __pyx_t_16 = __Pyx_PyObject_IsTrue(__pyx_t_17);
           __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-          if (__pyx_t_16 < 0) __PYX_ERR(0, 37, __pyx_L9_except_error)
+          if (__pyx_t_16 < 0) __PYX_ERR(0, 36, __pyx_L9_except_error)
           __pyx_t_15 = ((!(__pyx_t_16 != 0)) != 0);
           if (__pyx_t_15) {
             __Pyx_GIVEREF(__pyx_t_1);
@@ -1783,7 +1783,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
             __Pyx_XGIVEREF(__pyx_t_10);
             __Pyx_ErrRestoreWithState(__pyx_t_1, __pyx_t_2, __pyx_t_10);
             __pyx_t_1 = 0; __pyx_t_2 = 0; __pyx_t_10 = 0; 
-            __PYX_ERR(0, 37, __pyx_L9_except_error)
+            __PYX_ERR(0, 36, __pyx_L9_except_error)
           }
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -1811,7 +1811,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
         if (__pyx_t_3) {
           __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__2, NULL);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 37, __pyx_L1_error)
+          if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 36, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         }
@@ -1826,27 +1826,27 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
     __pyx_L23:;
   }
 
-  /* "markov.pyx":66
- * #    sys.exit(-1)
+  /* "markov.pyx":50
+ *     #TODO ADD ASANITY CHECK between words andlines
  *     #now pass the list to the C code
  *     c_arr_dim = len(words)             # <<<<<<<<<<<<<<
  *     c_lines_dim = len(lines) #how many lines do we have?
  *     cdef char **c_arr = to_cstring_array(words)
  */
-  __pyx_t_8 = PyList_GET_SIZE(__pyx_v_words); if (unlikely(__pyx_t_8 == -1)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __pyx_t_8 = PyList_GET_SIZE(__pyx_v_words); if (unlikely(__pyx_t_8 == -1)) __PYX_ERR(0, 50, __pyx_L1_error)
   __pyx_v_c_arr_dim = __pyx_t_8;
 
-  /* "markov.pyx":67
+  /* "markov.pyx":51
  *     #now pass the list to the C code
  *     c_arr_dim = len(words)
  *     c_lines_dim = len(lines) #how many lines do we have?             # <<<<<<<<<<<<<<
  *     cdef char **c_arr = to_cstring_array(words)
  *     cdef char **c_line =to_cstring_array(lines)
  */
-  __pyx_t_8 = PyList_GET_SIZE(__pyx_v_lines); if (unlikely(__pyx_t_8 == -1)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_8 = PyList_GET_SIZE(__pyx_v_lines); if (unlikely(__pyx_t_8 == -1)) __PYX_ERR(0, 51, __pyx_L1_error)
   __pyx_v_c_lines_dim = __pyx_t_8;
 
-  /* "markov.pyx":68
+  /* "markov.pyx":52
  *     c_arr_dim = len(words)
  *     c_lines_dim = len(lines) #how many lines do we have?
  *     cdef char **c_arr = to_cstring_array(words)             # <<<<<<<<<<<<<<
@@ -1855,7 +1855,7 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
  */
   __pyx_v_c_arr = __pyx_f_6markov_to_cstring_array(__pyx_v_words);
 
-  /* "markov.pyx":69
+  /* "markov.pyx":53
  *     c_lines_dim = len(lines) #how many lines do we have?
  *     cdef char **c_arr = to_cstring_array(words)
  *     cdef char **c_line =to_cstring_array(lines)             # <<<<<<<<<<<<<<
@@ -1864,14 +1864,14 @@ static double __pyx_f_6markov_transition_matrix(PyObject *__pyx_v_filename, CYTH
  */
   __pyx_v_c_line = __pyx_f_6markov_to_cstring_array(__pyx_v_lines);
 
-  /* "markov.pyx":73
+  /* "markov.pyx":57
  *     #take the c_arr dimensions to build a c_arr_dim*c_arr_dim matrix
  * 
  *     probability_matrix(c_line,c_arr,c_lines_dim,c_arr_dim)             # <<<<<<<<<<<<<<
  */
   probability_matrix(__pyx_v_c_line, __pyx_v_c_arr, __pyx_v_c_lines_dim, __pyx_v_c_arr_dim);
 
-  /* "markov.pyx":27
+  /* "markov.pyx":26
  * #we need cpdef to expose the function to python
  * 
  * cpdef double transition_matrix(filename) :             # <<<<<<<<<<<<<<
@@ -1922,7 +1922,7 @@ static PyObject *__pyx_pf_6markov_transition_matrix(CYTHON_UNUSED PyObject *__py
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("transition_matrix", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_6markov_transition_matrix(__pyx_v_filename, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_6markov_transition_matrix(__pyx_v_filename, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4112,11 +4112,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 };
 static int __Pyx_InitCachedBuiltins(void) {
   #if PY_MAJOR_VERSION >= 3
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) __PYX_ERR(0, 17, __pyx_L1_error)
   #else
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) __PYX_ERR(0, 17, __pyx_L1_error)
   #endif
-  __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) __PYX_ERR(0, 29, __pyx_L1_error)
+  __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) __PYX_ERR(0, 28, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 218, __pyx_L1_error)
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(1, 231, __pyx_L1_error)
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(1, 799, __pyx_L1_error)
@@ -4129,14 +4129,14 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "markov.pyx":37
+  /* "markov.pyx":36
  *     #clean the sentence from all the punctuations
  *     #
  *     with ifile as reader:             # <<<<<<<<<<<<<<
  *         for line in reader:
  *             new_line = re.sub('[^A-Za-z0-9]+'," ", line)
  */
-  __pyx_tuple__2 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
