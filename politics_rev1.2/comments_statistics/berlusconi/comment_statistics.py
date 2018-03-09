@@ -170,12 +170,12 @@ def average(csvfile,ofile):
     #ax.plot(x_linspace, interpolation_line,color=color[2],marker="+")
     ax.xaxis.set_tick_params(labelsize=18)
     ax.yaxis.set_tick_params(labelsize=18)
-    ax.set_ylabel(r"n$^\circ$ likes",fontsize=18)
-    ax.set_xlabel(r"n$^\circ$ post",fontsize=18)
+    ax.set_ylabel(r"n$^\circ$ likes",fontsize=20)
+    ax.set_xlabel(r"n$^\circ$ post",fontsize=20)
     ax.set_xlim(0,len(like_list))
     fig.tight_layout()
     plt.savefig("likes.pdf")
-
+    plt.savefig("likes.png",dpi=300,transparent=True)
 
 
 

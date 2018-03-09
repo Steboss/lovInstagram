@@ -5,6 +5,7 @@ from nltk.metrics.scores import precision, recall
 import sys
 import nltk
 import time
+import math
 
 def format_sentence(sent):
     return({word:True for word in  nltk.word_tokenize(sent)})
@@ -89,6 +90,12 @@ f1 = 2*((precision*recall)/(precision+recall))
 print("Precision: %.2f" % precision)
 print("Recall: %.2f" % recall)
 print("F1: %.2f" % f1)
+#compute the error
+error = (false_pos + false_neg)/(false_pos + false_neg + true_pos + true_neg)
+Ntot = (false_pos + false_neg + true_pos + true_neg)
+ci = error + 1.96*math.sqrt(error*(1-error)/Ntot)
+print("Error: %.2f" % ci)
+
 sys.exit(-1)
 #print(accuracy(classifier, test))
 

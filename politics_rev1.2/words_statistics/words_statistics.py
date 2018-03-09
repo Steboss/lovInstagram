@@ -54,9 +54,11 @@ def average_words(comm_list):
     stddev = np.std(val_list)/math.sqrt(len(val_list))
     return mean,stddev
 
-def most_repeated(comm_list):
+def most_repeated(comm_list,filename):
+    ofile = open(filename,"w")
 
     dict_val = {}
+    tot_words = 0
     for line in comm_list:
         words = line.split()
         for word in words:
@@ -65,6 +67,7 @@ def most_repeated(comm_list):
                     dict_val[word]+=1
                 else:
                     dict_val[word] = 1
+                tot_words+=1
 
     values = []
     for words in dict_val.keys():
@@ -72,11 +75,12 @@ def most_repeated(comm_list):
     #sort
     values.sort()
     #print(values)
-
+    repeated = []
     for i in range(len(values)-1,len(values)-51,-1):
         for words in dict_val.keys():
             if dict_val[words]== values[i]:
                 print(values[i],words)
+                ofile.write("%.2f, %s\n"% ((values[i]/tot_words),words))
 
 def uniquewords(words1,label1,words2,label2,words3,label3,words4,label4):
     #very bad function, try to optimize it
@@ -217,15 +221,17 @@ print("Salvini\t\t%.2f+/-%.2f" % (sa_avg,sa_std))
 
 #find the most repeatedwords for each candidate
 #here we need a histogram
-print("Berlusconi")
-most_repeated(berlusconi)
-print("Dimaio")
-most_repeated(dimaio)
-print("Re")
-most_repeated(renzi)
-print("Sa")
-most_repeated(salvini)
+os.makedirs("repeated_words")
 
+most_repeated(berlusconi,"repeated_words/berlusconi.dat")
+
+most_repeated(dimaio,"repeated_words/dimaio.dat")
+
+most_repeated(renzi,"repeated_words/renzi.dat")
+
+most_repeated(salvini,"repeated_words/salvini.dat")
+
+sys.exit(-1)
 dict_res =uniquewords(berlusconi_words,"berlusconi",dimaio_words,"dimaio",\
                       salvini_words,"salvini",renzi_words,"renzi")
 

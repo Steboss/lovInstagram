@@ -12,7 +12,6 @@ Most Informative Features
                   Silvio = True              pos : neg    =      5.7 : 1.0
                     anni = True              neg : pos    =      4.3 : 1.0
                    forza = True              pos : neg    =      3.7 : 1.0
-                       ! = True              pos : neg    =      3.4 : 1.0
                    paese = True              neg : pos    =      3.4 : 1.0
                       ha = True              neg : pos    =      3.4 : 1.0
                        o = True              neg : pos    =      3.0 : 1.0
