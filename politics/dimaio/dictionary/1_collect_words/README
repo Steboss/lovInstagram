@@ -1,5 +1,0 @@
-Here we are going to take out the Italian stopwords,
-select all the words with more than 2 characters
-and remove punctuations andnumbers
-The result will be the beginning forthe  dictionary
-1779 items for the raw_list

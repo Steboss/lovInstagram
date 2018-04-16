@@ -1,4 +1,0 @@
-Clean the data eliminating @ and # and all the non ascii characters
-
-1) take the csv of comment_text from the database
-2) clean the csv
