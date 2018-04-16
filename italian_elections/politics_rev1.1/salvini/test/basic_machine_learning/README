@@ -1,0 +1,54 @@
+In this folder I am trying a more sophisticated approach with respect of
+using the dictionary. 
+Here I have manually selected 200 good comments and 120 bad comments to 
+Salvini's feeds.
+Then, using the nltk module we are going to analyse how many bad and
+good comments are present
+
+
+IN this case 100 and 100 items gave very low accuracy
+We have many replies to comments
+and very very offensive comments!
+
+The accuracy of the classifier is:
+Most informative features...
+Most Informative Features
+                     Non = True              neg : pos    =      4.3 : 1.0
+                       5 = True              neg : pos    =      3.7 : 1.0
+                    come = True              neg : pos    =      3.4 : 1.0
+                   cazzo = True              neg : pos    =      3.0 : 1.0
+                      io = True              pos : neg    =      3.0 : 1.0
+                      se = True              neg : pos    =      3.0 : 1.0
+                      al = True              neg : pos    =      3.0 : 1.0
+                     ... = True              neg : pos    =      2.6 : 1.0
+                     una = True              neg : pos    =      2.6 : 1.0
+                     per = True              neg : pos    =      2.6 : 1.0
+None
+0.66
+Total pos 25  and neg 25 out of 50
+
+Total pos 2712 and neg 3225 out of total comments 5937
+
+Percentage: pos 0.46  and neg 0.54 
+
+with 120 comments
+
+Most informative features...
+Most Informative Features
+                      ha = True              neg : pos    =      6.1 : 1.0
+                  Matteo = True              pos : neg    =      5.2 : 1.0
+                     Non = True              neg : pos    =      4.2 : 1.0
+                    come = True              neg : pos    =      3.7 : 1.0
+                   cazzo = True              neg : pos    =      3.6 : 1.0
+                       i = True              neg : pos    =      3.2 : 1.0
+                      se = True              neg : pos    =      2.9 : 1.0
+                       5 = True              neg : pos    =      2.5 : 1.0
+                      al = True              neg : pos    =      2.5 : 1.0
+                     una = True              neg : pos    =      2.5 : 1.0
+None
+0.7295081967213115
+Total pos 25  and neg 25 out of 50
+
+Total pos 2069 and neg 3868 out of total comments 5937
+
+Percentage: pos 0.35  and neg 0.65 

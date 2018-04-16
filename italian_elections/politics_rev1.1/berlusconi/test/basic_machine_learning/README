@@ -1,0 +1,26 @@
+In this folder I am trying a more sophisticated approach with respect of
+using the dictionary. 
+Here I have manually selected 100 good comments and 100 bad comments to 
+Berlu's feeds.
+Then, using the nltk module we are going to analyse how many bad and
+good comments are present
+
+The accuracy of the classifier is: 0.81
+Most Informative Features
+              Berlusconi = True              pos : neg    =      7.0 : 1.0
+                      da = True              neg : pos    =      6.3 : 1.0
+                  Silvio = True              pos : neg    =      5.7 : 1.0
+                    anni = True              neg : pos    =      4.3 : 1.0
+                   forza = True              pos : neg    =      3.7 : 1.0
+                   paese = True              neg : pos    =      3.4 : 1.0
+                      ha = True              neg : pos    =      3.4 : 1.0
+                       o = True              neg : pos    =      3.0 : 1.0
+                  sempre = True              pos : neg    =      3.0 : 1.0
+None
+0.8118811881188119
+Total pos 25  and neg 25 out of 50
+
+Total pos 1894 and neg 2505 out of total comments 4399
+
+Percentage: pos 0.43  and neg 0.57 
+
